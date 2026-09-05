@@ -1,0 +1,12 @@
+1. Import necessary packages (e.g. `datasets`, `transformers.pipeline`, `torch` and more).
+2. Setup variables for model training and saving pipeline such as our model name, save directory and dataset name.
+3. Create a directory for saving models.
+4. Load and preprocess the dataset from Hugging Face Hub using `datasets.load_dataset`.
+5. Import a tokenizer with `transformers.AutoTokenizer` and map it to our dataset with `dataset.map`.
+6. Set up an evaluation metric with `evaluate` & create a function to evaluate our model's predictions.
+7. Import a model with `transformers.AutoModelForSequenceClassification` and prepare it for training with `transformers.TrainingArguments` and `transformers.Trainer`.
+8. Train the model on our text dataset by calling `transformers.Trainer.train`.
+9. Save the trained model to a local directory.
+10. Push the model to the Hugging Face Hub.
+11. Evaluate the model on the test data.
+12. Test the trained model on a custom sample using `transformers.pipeline` to make sure it works.
